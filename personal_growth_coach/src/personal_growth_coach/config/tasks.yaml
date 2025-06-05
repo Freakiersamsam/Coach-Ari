@@ -1,17 +1,27 @@
-research_task:
+set_vague_goal:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    User sets a vague goal. Ari delegates to Milo. Milo defines SMART structure. Zara stores data. Nico breaks it into subtasks. Clara schedules milestones. Felix sets habit reminders.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A structured SMART goal, milestones, scheduled events, and habit reminders for the user.
+  agent: ari
 
-reporting_task:
+user_blocked:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    User feels blocked. Ari delegates to Otto. Otto reframes issue. Refers to Nova for new learning. Nova finds resource. Felix tracks new routine.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Reframed perspective, learning resource, and a new tracked routine for the user.
+  agent: ari
+
+quarterly_review:
+  description: >
+    Ari compiles data from Zara, Clara, Felix. Presents insight report with motivational message from Otto.
+  expected_output: >
+    A quarterly review report with insights and a motivational message.
+  agent: ari
+
+calendar_conflict:
+  description: >
+    Calendar conflict detected. Clara triggers realignment. Notifies Nico to adjust project timeline. Ari relays to user.
+  expected_output: >
+    Adjusted project timeline and user notification about the realignment.
+  agent: ari
