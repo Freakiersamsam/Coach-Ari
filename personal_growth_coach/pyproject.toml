@@ -1,0 +1,23 @@
+[project]
+name = "personal_growth_coach"
+version = "0.1.0"
+description = "personal_growth_coach using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.126.0,<1.0.0"
+]
+
+[project.scripts]
+personal_growth_coach = "personal_growth_coach.main:run"
+run_crew = "personal_growth_coach.main:run"
+train = "personal_growth_coach.main:train"
+replay = "personal_growth_coach.main:replay"
+test = "personal_growth_coach.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
