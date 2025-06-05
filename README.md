@@ -10,7 +10,7 @@ A holistic personal assistant that acts as a growth coach, managing both calenda
 - **Conversational Interface:** Natural language processing, memory system, personality matching, multi-modal communication.
 
 ## Architecture
-- **Backend:** Modular, API-first (Node.js/TypeScript or Python/FastAPI)
+- **Backend:** CrewAi opensource software
 - **Frontend:** Mobile-first (React Native/Expo or Flutter)
 - **Security:** End-to-end encryption, GDPR compliance
 - **Scalability:** Microservices, caching, CDN for static assets
