@@ -1,47 +1,32 @@
-from crewai import Agent, Crew, Process, Task
-from crewai.project import CrewBase, agent, crew, task
-from crewai.agents.agent_builder.base_agent import BaseAgent
-from typing import List
+from crewai.project import CrewBase
 
 @CrewBase
 class PersonalGrowthCoach():
-    """PersonalGrowthCoach crew"""
+    pass  # CrewAI will auto-load agents and tasks from YAML
 
-    agents: List[BaseAgent]
-    tasks: List[Task]
+    def ari(self):
+        pass
 
-    @agent
-    def researcher(self) -> Agent:
-        return Agent(
-            config=self.agents_config['researcher'],
-            verbose=True
-        )
+    def milo(self):
+        pass
 
-    @agent
-    def reporting_analyst(self) -> Agent:
-        return Agent(
-            config=self.agents_config['reporting_analyst'],
-            verbose=True
-        )
+    def clara(self):
+        pass
 
-    @task
-    def research_task(self) -> Task:
-        return Task(
-            description="Research the topic: {topic}",
-            agent=self.researcher(),
-        )
+    def nico(self):
+        pass
 
-    @task
-    def reporting_task(self) -> Task:
-        return Task(
-            description="Write a report on the research findings.",
-            agent=self.reporting_analyst(),
-        )
+    def zara(self):
+        pass
 
-    @crew
-    def crew(self) -> Crew:
-        return Crew(
-            agents=[self.researcher(), self.reporting_analyst()],
-            tasks=[self.research_task(), self.reporting_task()],
-            process=Process.sequential,
-        )
+    def otto(self):
+        pass
+
+    def nova(self):
+        pass
+
+    def felix(self):
+        pass
+
+    def iris(self):
+        pass
